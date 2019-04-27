@@ -1,12 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
     <PropertyGroup>
-        <TargetFramework>netcoreapp2.1</TargetFramework>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
         <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
         <AWSProjectType>Lambda</AWSProjectType>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.4" />
+        <Content Include="bootstrap">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.App" />
         <PackageReference Include="Amazon.Lambda.AspNetCoreServer" Version="3.0.3" />
+        <PackageReference Include="Amazon.Lambda.RuntimeSupport" Version="1.0.0" />
         <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="3.3.100.1" />
     </ItemGroup>
 </Project>
