@@ -12,6 +12,7 @@
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.App" />
         <PackageReference Include="Amazon.Lambda.AspNetCoreServer" Version="3.0.3" />
+        <PackageReference Include="AWSSDK.Lambda" Version="3.3.101" />
         <PackageReference Include="Amazon.Lambda.RuntimeSupport" Version="1.0.0" />
         <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="3.3.100.1" />
     </ItemGroup>
