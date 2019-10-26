@@ -1,0 +1,18 @@
+version: 0.2
+
+env:
+  variables:
+    AWS_DEFAULT_REGION: ap-southeast-2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 8
+    commands:
+      - rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-prod.rpm
+      - yum install dotnet-sdk-3.0 -y
+      - dotnet tool install -g Amazon.Lambda.Tools
+  build:
+    commands:
+      - cd ./AWSServerless1
+      - dotnet lambda deploy-serverless
